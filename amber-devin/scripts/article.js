@@ -8,7 +8,7 @@ let articles = [];
 function Article (rawDataObj) {
   // TODO: Use the JS object that is passed in to complete this constructor function:
   // Save ALL the properties of `rawDataObj` into `this`
-  this.rawDataObj = rawDataObj;
+  // this.rawDataObj = rawDataObj;
   this.title = rawDataObj.title;
   this.category = rawDataObj.category;
   this.author = rawDataObj.author;
@@ -18,6 +18,7 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
+  console.log('we are at toHtml');
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
   // THe benefit of cloning the article lets you have D.R.Y'er html and enables you to have a template to reuse in the JavaScript over and over.
 
@@ -53,10 +54,15 @@ rawData.sort(function(a,b) {
 
 // TODO: Refactor these for loops using the .forEach() array method.
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
+rawData.forEach(function(articleObj){
+  articles.push(new Article(articleObj))
+});
 
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+
+// for(let i = 0; i < articles.length; i++) {
+//   // $('#articles').append(articles[i].toHtml());
+// }
+
+articles.forEach(function(element){
+  $('#articles').append(element.toHtml());
+});
