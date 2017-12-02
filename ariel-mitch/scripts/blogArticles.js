@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// This is the data that goes into our constructor function for Articles. The constructor function creates and array of Article objects. Each object is then placed on the DOM. This data includes the key/value pairs for the each articles title, category, author etc.
 
 let rawData = [
   {
