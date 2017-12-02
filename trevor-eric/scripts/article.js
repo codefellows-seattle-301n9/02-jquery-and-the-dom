@@ -27,11 +27,11 @@ Article.prototype.toHtml = function() {
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
-  $newArticle.attr('data-name', this.author);
-  $newArticle.attr('data-url', this.authorUrl);
-  $newArticle.attr('data-title', this.title);
-  $newArticle.attr('data-body', this.body);
-  $newArticle.attr('data-date', this.publishedOn);
+  $newArticle.find('address a').html(this.author);
+  $newArticle.find('article a').attr('href', this.authorUrl);
+  $newArticle.find('article h1').html(this.title);
+  $newArticle.find( 'article body' ).html(this.body);
+  //$newArticle this.publishedOn;
 
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
@@ -64,6 +64,6 @@ rawData.forEach(function(article){
 //  $('#articles').append(articles[i].toHtml());
 //}
 
-articles.forEach(function(article){
-  $('#articles').append(article).toHtmal()
-});
+//articles.forEach(function(article){
+//  $('articles').append(article).toHtml();
+//});
