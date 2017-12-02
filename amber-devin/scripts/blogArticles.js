@@ -1,7 +1,8 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// We pulled the data and put it into a template that is created by the articles template and toHtml.
+// rawData is an array of objects and each object has a key value pair that include title, cat, author, authorUrl, publishedOn, and body.
 
 let rawData = [
   {
