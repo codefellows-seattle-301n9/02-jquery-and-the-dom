@@ -18,7 +18,6 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  console.log('we are at toHtml');
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
   // THe benefit of cloning the article lets you have D.R.Y'er html and enables you to have a template to reuse in the JavaScript over and over.
 
