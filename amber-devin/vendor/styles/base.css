@@ -15,6 +15,11 @@ img{
     width: 100%;
 }
 
+address, time{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /*stretch goal. intermediate media query*/
 @media only screen and (orientation: landscape) {
 
