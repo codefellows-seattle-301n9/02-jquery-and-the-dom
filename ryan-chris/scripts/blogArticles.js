@@ -1,7 +1,8 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+
+// rawData is an array who's elements are all objects, with the key value pairs of title, category, author, authorURL, publishedOn, and body with corasponding string information for each key. Each object represents and article that will be incerted onto the page using jQuery.
 
 let rawData = [
   {
