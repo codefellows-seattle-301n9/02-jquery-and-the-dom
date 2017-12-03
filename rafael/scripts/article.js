@@ -18,7 +18,7 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // The benefit of cloning the template we clone the element as well as all it's shild elements and their text nodes so that we can
+  // The benefit of cloning the template is that we clone the element as well as all it's shild elements and their text nodes so that we can
   // use the strcture again on other articles. 
 
   let $newArticle = $('article.template').clone();
@@ -37,6 +37,7 @@ Article.prototype.toHtml = function() {
       5. publication date. */
   $newArticle.find('address a').text(this.author);
   $newArticle.find('address a').attr('href', this.author.url);
+  $newArticle.find('h1').text(this.title);
   $newArticle.find('.article-body').html(this.body);
 
   // REVIEW: Display the date as a relative number of 'days ago'
