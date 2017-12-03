@@ -1,16 +1,28 @@
+#top-header {
+    width: 100%;
+}
+
 .template {
     display: none;
 }
 
+.icon-menu {
+    float: right;
+}
+
+.draft h1 {
+    margin-top: 1%;
+}
+
 /* MOBILE */
 @media screen and (max-width: 640px) {
-    .nav-list {
+    ul {
         display: none;
     }
+}
 
-    .icon-menu:hover ~ .nav-list {
-        display: block;
-    }
+.show {
+    display: block;
 }
 
 /* DESKTOP */
@@ -20,11 +32,12 @@
     }
 
     .nav-list {
-        margin-left: 2em;
+        margin-left: 2.5em;
     }
 
     .nav-list li {
         display: inline;
-        font-size: 1em;
+        font-size: 1.3em;
+        margin-right: 1em;
     }
 }

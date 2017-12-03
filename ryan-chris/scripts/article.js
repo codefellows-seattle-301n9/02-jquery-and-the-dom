@@ -65,3 +65,8 @@ rawData.forEach(function(blogPost) {
 articles.forEach(function(element) {
   $('#articles').append(element.toHtml());
 });
+
+// show/hide navigation with click of hamburger menu icon
+$('.icon-menu').on('click', function() {
+  $('ul').toggleClass('show');
+});
