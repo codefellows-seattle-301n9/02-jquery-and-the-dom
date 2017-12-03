@@ -13,7 +13,7 @@ function Article (rawDataObj) {
   this.title = rawDataObj.title;
   this.category = rawDataObj.category;
   this.author = rawDataObj.author;
-  this.authorURL = rawDataObj.authorURL;
+  this.authorUrl = rawDataObj.authorUrl;
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
 }
@@ -40,8 +40,8 @@ Article.prototype.toHtml = function() {
       5. publication date. */
 
   $newArticle.find('a').text(this.author);
-  $newArticle.find('.draft a').attr('href', this.authorURL);
-  $newArticle.find('.draft h1').text(this.title);
+  $newArticle.find('a').attr('href', this.authorUrl);
+  $newArticle.find('h1').text(this.title);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time').text(this.publishedOn);
 
