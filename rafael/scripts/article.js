@@ -3,7 +3,7 @@
 let articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// The purpose of the following funciton is to create an article constructor so that we can instantiate each article from the raw data with their own properties.
+// The purpose of the following funciton is to create an article constructor so that we can instantiate each article from the raw data with their own properties. The name is capitalized because that is the naming convention for creating constructor functions. The context of this refers to the object being instantiated.
 
 function Article (rawDataObj) {
   // TODO: Use the JS object that is passed in to complete this constructor function:
