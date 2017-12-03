@@ -2,7 +2,7 @@
 
 let articles = [];
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// PUT YOUR RESPONSE HEREdd
 // Creates a new object constructor
 function Article (rawDataObj) {
   // TODO: Use the JS object that is passed in to complete this constructor function:
@@ -22,16 +22,15 @@ Article.prototype.toHtml = function() {
   // Allows you to duplicate elements on a page. It also duplicates the children of that element along with it. Should be used i conjunction with an insertion method.
 
   let $newArticle = $('article.template').clone();
-  $newArticle = $('article').removeClass('template');
+  $newArticle.removeClass('template');
   /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
 
   if (!this.publishedOn) $newArticle.addClass('draft');
-  $newArticle.find("").text(this.category);
-  // $newArticle.find(). this.authorName);
-  $newArticle.find('h1').text(this.title);
-
+  $newArticle.find(".byline a").text(this.author);
+  $newArticle.find(".byline a").text(this.authorURL);
+  $newArticle.find('#title').html(this.title);
   $newArticle.find(".article-body").html(this.body);
-  $newArticle.attr('data-publishedOn', this.publishedOn);
+  $newArticle.find("byline time").attr('datetime','this.publishedOn');
 
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
@@ -55,16 +54,10 @@ rawData.sort(function(a,b) {
 
 // TODO: Refactor these for loops using the .forEach() array method.
 
-// for(let i = 0; i < rawData.length; i++) {
-//   articles.push(new Article(rawData[i]));
-// }
 rawData.forEach(function(element) {
   articles.push(new Article(element));
 });
 
-// for(let i = 0; i < articles.length; i++) {
-//   $('#articles').append(articles[i]).html() ;
-// }
 
 articles.forEach(function(elementOne) {
   $('#articles').append(elementOne.toHtml());
