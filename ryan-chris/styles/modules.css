@@ -10,8 +10,14 @@
     float: right;
 }
 
-.draft h1 {
+#article-title {
     margin-top: 1%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.show {        
+    display: block;
 }
 
 /* MOBILE */
@@ -19,10 +25,11 @@
     ul {
         display: none;
     }
-}
 
-.show {
-    display: block;
+    .nav-list li {
+        margin-bottom: 1em;
+        text-decoration: underline;
+    }
 }
 
 /* DESKTOP */

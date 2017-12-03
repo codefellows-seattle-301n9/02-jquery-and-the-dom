@@ -12,18 +12,18 @@ This blog features the ability to upload new content to the web page using jQuer
 
 ## Getting Started
 
-Download jQuery CDN. link normalize.css file from MeyersWeb. Add SMACSS files (base, layout, modules). link js files with scripts to render content to the page. 
+Download jQuery CDN, link normalize.css file from MeyersWeb, add SMACSS files (base, layout, modules), and link js files with scripts to render content to the page. 
 
 ## Architecture
 
-This application was designed from html5 and css3 with a mobile first design approach, implamenting SMACSS guidelines for styling and responsive webdesign techniques to improve user experience. The page will become more dynamic by uploading content to the pager using jQuery.
+This application was designed with HTML5 and CSS3 with a mobile first design approach, implamenting SMACSS guidelines for styling and responsive webdesign techniques to improve user experience. The page will become more dynamic by uploading content to the pager using jQuery.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples: -->
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource. -->
-
-12-02-2017 3:00 - Format and file structure in place. html header adjusted to contain icon links.
+12-02-2017 3:00pm - Format and file structure in place. html header adjusted to contain icon links.
+12-02-2017 5:45pm - Article content renders to page properly without repeating previously posted blogs.
+12-02-2017 7:30pm - Nav menu displays with click event.
 
 ## Credits and Collaborations
 Collaboration (Pair-Programming): 

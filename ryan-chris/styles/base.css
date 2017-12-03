@@ -28,14 +28,15 @@ img {
     margin-bottom: 3%;
 }
 
+footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 /* MOBILE */
 @media screen and (max-width: 640px) {
     body {
         margin: 0;
     }
-}
-
-/* DESKTOP*/
-@media screen and (min-width: 640px ){
-
 }
