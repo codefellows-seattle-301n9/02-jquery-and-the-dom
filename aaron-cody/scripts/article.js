@@ -14,7 +14,7 @@ function Article (rawDataObj) {
   this.category = rawDataObj.category;
   this.author = rawDataObj.author;
   this.authorUrl = rawDataObj.authorUrl;
-  this.publshedOn = rawDataObj.publishedOn;
+  this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
 }
 
@@ -25,8 +25,8 @@ Article.prototype.toHtml = function() {
   let $newArticle = $('article.template').clone();
   /* DONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
   // $newArticle.show().insertAfter('section');
-  $newArticle.removeClass('template').addClass('.someNewTemplateName');
-  
+  $newArticle.removeClass('template').addClass('someNewTemplateName');
+
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
@@ -37,11 +37,22 @@ Article.prototype.toHtml = function() {
       3. article title,
       4. article body, and
       5. publication date. */
-  $('.someNewTemplateName').find('address').toHtml(this.author);
-  $('.someNewTemplateName').find('href').toHtml(this.authorUrl);
-  $('.someNewTemplateName').find('h1').toHtml(this.title);
-  $('.someNewTemplateName').find('section').toHtml(this.body);
-  $('.someNewTemplateName').find('time').toHtml(this.time);
+
+      ($newArticle).find('a').text(this.author);
+      ($newArticle).find('a').attr('href' , this.authorUrl);
+      ($newArticle).find('h1').text(this.title);
+      ($newArticle).find('section').html(this.body);
+      ($newArticle).find('time').attr('datetime', this.publishedOn);
+
+
+
+
+
+  // ('newArticle' address').text(this.author);
+  // ('newArticle' a').attr('href' , this.authorUrl);
+  // ('newArticle' h1').text(this.title);
+  // ('newArticle' section').html(this.body);
+  // ('newArticle' time').text(this.time);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -66,7 +77,9 @@ rawData.forEach(function(rawDataObject) {
 // for(let i = 0; i < articles.length; i++) {
 //   $('#articles').append(articles[i].toHtml());
 // }
-
+$('#articles')
 articles.forEach(function(articleObject) {
-  $('#articles').append(articleObject).toHtml();
+  $('#articles').append(articleObject.toHtml());
+  // console.log(articleObject.toHtml());
 });
+

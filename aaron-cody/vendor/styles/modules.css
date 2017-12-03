@@ -13,3 +13,7 @@ a {
 .link-name {
     font-weight: bold;
 }
+
+.template {
+    display: none;
+}
