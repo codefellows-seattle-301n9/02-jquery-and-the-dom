@@ -1,3 +1,7 @@
+.template {
+    display: none;
+}
+
 /* MOBILE */
 @media screen and (max-width: 640px) {
     .nav-list {
