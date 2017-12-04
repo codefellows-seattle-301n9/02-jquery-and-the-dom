@@ -1,8 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
-
+// The objects are passed through the rawData array of key value pairs. Next, we pushed the array into a template new Article. We will create a new array of articles with these objects inside. 
 let rawData = [
   {
     title:       'Bacon Ipsum',

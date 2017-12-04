@@ -1,21 +1,23 @@
-# 02 Jquery And The Dom
+# 02 Jquery and The Dom
 
 **Authors**: Alicia Lycan and Dennis Comer
 **Version**: 1.0.0
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+Our problem domain for this application is to practice with Javascript, JQuery, HTML, and DOM manipulation with an array of data.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Make a copy of the starter code and rename it with your name.
+2. Next, open the js files.
+3. Complete the TODO and response items.
+4. Upload your final edits to the live-server.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+The application uses basic HTML, CSS, JavaScript, JQuery, and DOM manipulation.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+12-01-2017 5:45pm - Application now has a fully-functional and responsive design.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+The application was pair programmed by Alicia Lycan and Dennis Comer.
