@@ -1,0 +1,49 @@
+.site-header {
+    background-color: lightgoldenrodyellow;
+}
+
+.heading-group-h1 {
+    background-color: lightgoldenrodyellow;
+    font-weight: bold;
+}
+
+.heading-text {
+    width: 70%;
+    line-height: 2em;
+    font-size: 3vw;
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+#heading-text-h1 {
+    padding-top: 2%;
+}
+
+.icon-menu {
+    position: relative;
+    bottom: 16vw;
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+}
+
+.byline {
+    display: inline;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: gray;
+}
+
+.article-body {
+    margin-top: 1%;
+}
+
+/* MOBILE */
+@media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+    }
+}

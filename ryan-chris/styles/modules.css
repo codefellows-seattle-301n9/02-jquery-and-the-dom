@@ -1,0 +1,50 @@
+#top-header {
+    width: 100%;
+}
+
+.template {
+    display: none;
+}
+
+.icon-menu {
+    float: right;
+}
+
+#article-title {
+    margin-top: 1%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.show {        
+    display: block;
+}
+
+/* MOBILE */
+@media screen and (max-width: 640px) {
+    ul {
+        display: none;
+    }
+
+    .nav-list li {
+        margin-bottom: 1em;
+        text-decoration: underline;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 640px) {
+    .icon-menu {
+        display: none;
+    }
+
+    .nav-list {
+        margin-left: 2.5em;
+    }
+
+    .nav-list li {
+        display: inline;
+        font-size: 1.3em;
+        margin-right: 1em;
+    }
+}
