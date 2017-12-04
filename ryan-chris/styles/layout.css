@@ -1,3 +1,7 @@
+.site-header {
+    background-color: lightgoldenrodyellow;
+}
+
 .heading-group-h1 {
     background-color: lightgoldenrodyellow;
     font-weight: bold;
@@ -28,9 +32,13 @@
 
 .byline {
     display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     color: gray;
+}
+
+.article-body {
+    margin-top: 1%;
 }
 
 /* MOBILE */
@@ -38,8 +46,4 @@
     body {
         width: 100%;
     }
-}
-/* DESKTOP*/
-@media screen and (min-width: 640px) {
-    
 }
