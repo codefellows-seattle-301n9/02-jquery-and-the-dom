@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// THis is data of the variable array rawData with objects, eah with 6 properties or key/value pairs. EX: title is a key (or property name) with a value that changes bewtween objects in the array with the same key.
+// THis is data of the variable array rawData with objects, eah with 6 properties(another way to say "key names") or key/value pairs. EX: title is a key (or property name) with a value that changes bewtween objects in the array with the same key.
 
 let rawData = [
   {
