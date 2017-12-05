@@ -1,0 +1,19 @@
+.site-header{
+    background-color: rgb(236, 186, 98);
+
+}
+
+.icon-menu{
+    display: none;
+}
+.tab-content{
+    clear: both;
+}
+.main-nav-list{
+    background-color: rgb(236, 186, 98);
+    margin: 10%;
+    padding: 10%;
+}
+.template{
+    display: none;
+}
