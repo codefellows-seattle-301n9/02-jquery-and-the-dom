@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// PUT YOUR RESPONSE HERE We will utilize this data to populate our DOM.We are holding our data in an array of json objects. The Objects have a key/ value pair that ties to our articles.js Once the function in that file is called it will create a new instance of an object and fill it with the values from the matching keys. 
 
 let rawData = [
   {
