@@ -1,0 +1,19 @@
+.tab {
+    margin: 0cm 4cm 1cm 0cm;
+
+    font-size: 2em;
+
+}
+a {
+    color: gray;
+    text-decoration: none;
+    padding-left: .5em;
+}
+
+.link-name {
+    font-weight: bold;
+}
+
+.template {
+    display: none;
+}
