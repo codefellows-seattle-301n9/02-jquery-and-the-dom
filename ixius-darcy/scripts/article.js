@@ -14,7 +14,6 @@ this.author = rawDataObj.author;
 this.authorUrl= rawDataObj.authorUrl;
 this.publishedOn = rawDataObj.publishedOn;
 this.body = rawDataObj.body;
-
 }
 
 Article.prototype.toHtml = function() {
@@ -23,6 +22,7 @@ Article.prototype.toHtml = function() {
 
   let $newArticle = $('article.template').clone();
   /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
+
   $newArticle.removeClass('template');
 
 
@@ -36,13 +36,19 @@ Article.prototype.toHtml = function() {
       3. article title,
       4. article body, and
       5. publication date. */
-  $newArticle.find('.byline a').text(this.author);
-  $newArticle.find('.byline a').attr('href', 'this.authorURL').html(this.authorURL);
-  $newArticle.find('.title').html(this.title);
-  $newArticle.find('.articles-body').text(this.body);
-  $newArticle.find('.byline time').attr('datetime', 'this.publishedOn');
+
+
+      $newArticle.find('h1').html(this.title);
+      $newArticle.find('a').attr('href', this.authorUrl);
+      $newArticle.find('address').html(this.author);
+      $newArticle.find('section').html(this.body);
+      $newArticle.find('time').html(this.publishedOn)
 
   // REVIEW: Display the date as a relative number of 'days ago'
+
+
+
+
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
   return $newArticle;
