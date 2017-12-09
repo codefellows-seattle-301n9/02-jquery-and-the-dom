@@ -9,7 +9,7 @@ function Article (rawDataObj) {
   // DONE: Use the JS object that is passed in to complete this constructor function:
   // Save ALL the properties of `rawDataObj` into `this`
   this.title = rawDataObj.title;
-  this.category = rawDataObj.category:
+  this.category = rawDataObj.category;
   this.author = rawDataObj.author;
   this.authorUrl = rawDataObj.authorUrl;
   this.publishedOn = rawDataObj.publishedOn;
@@ -28,7 +28,7 @@ Article.prototype.toHtml = function() {
 
   if (!this.publishedOn) $newArticle.addClass('draft');
 
-    /* DONE? : Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+    /* DONE : Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
       1. author name,
       2. author url,
@@ -56,7 +56,7 @@ rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// DONE, (but with linter errors.  The linter doesn't seem to know about each, so for the first each, it expect an open parenthesis. ): Refactor these for loops using the .forEach() array method.
+// DONE: Refactor these for loops using the .forEach() array method.
 
 // for each (let i in rawData) {
 //   articles.push(new Article(rawData[i]));
