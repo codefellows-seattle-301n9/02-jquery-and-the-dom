@@ -50,9 +50,9 @@ I used the following languages in thsi lab: JavaScript, CSS and HTML.  I used th
 ## Change Log
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource. -->
 
-TA is seeking more information
+TA is seeking more information.  Not sure if there is an easy way to grab all PR commit messages.
 
 ## Credits and Collaborations
 
