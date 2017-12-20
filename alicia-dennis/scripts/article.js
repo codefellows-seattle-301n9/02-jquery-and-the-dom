@@ -29,18 +29,17 @@ Article.prototype.toHtml = function() {
   $newArticle.attr('data-category', this.category);
 
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
-    We need to fill in:
+    We need to fill in: //shape
       1. author name,
       2. author url,
       3. article title,
       4. article body, and
       5. publication date. */
-  $newArticle.find('h1').html(this.title); //space is created, need to ad content of parent-child relationship (getelementbyclass & getter/setter)
-  $newArticle.find('.byline a').html(this.author);
-  $newArticle.find('.byline a').html(this.authorUrl);
+  $newArticle.find('h1').html(this.title); //space is created, need to ad content of parent-child relationship (getelementbyclass & getter/setter).
+  $newArticle.find('a').html(this.author);
+  $newArticle.find('a').attr('href', this.authorUrl);
   $newArticle.find('.article-body').html(this.body);
-  $newArticle.find('time').html(this.publishedOn);
-  $newArticle.find('.byline time').html(this.publishedOn);
+  $newArticle.find('time').attr('datetime', this.publishedOn);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -50,21 +49,24 @@ Article.prototype.toHtml = function() {
 
 rawData.sort(function(a,b) {
   // REVIEW: Take a look at this sort method; This may be the first time we've seen it. Look at the docs and think about how the dates would be sorted if the callback were not included in this method.
+  //function is expecting to return a negative number, 0, or a positive number.
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
 // TODO: Refactor these for loops using the .forEach() array method.
 rawData.forEach(function(blogData) {
   articles.push(new Article(blogData));
-  console.log(blogData);
 });
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i])); //take one object from rawData and push it into a new object for total length of the array
-}
+// for(let i = 0; i < rawData.length; i++) {
+//   articles.push(new Article(rawData[i])); //take one object from rawData array and push it into new articles a new array for total length of the array each time
+// }
 
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+// for(let i = 0; i < articles.length; i++) {
+//   $('#articles').append(articles[i].toHtml());
+// }
 
-//take in each index of some array and push through some object. grab raw data one at a time and push through new article. We will create a new array of articles with objects inside. We will grab a new element in last for loop, an id of articles (from html file), this is going to exist in the DOM, we are dot appending. We arent grabbing the array article instead we are running the toHTML method and we are appending the result/return of that method. Will return new article. Runs 30 times (find id and append new article). 1st for loop calls constructor, second calls toHtml method.
+articles.forEach(function(article) {
+  $('#articles').append(article.toHtml());
+});
+//take in each index of array and push through an object calling the result of the toHtml function. We will create a new array of articles with objects inside. We will grab a new element in last for loop, an id of articles (from html file), this is going to exist in the DOM, we are dot appending. We arent grabbing the array article instead we are running the toHTML method and we are appending the result/return of that method. Will return new article. Runs 30 times (find id and append new article). 1st for loop calls constructor, second calls toHtml method.
