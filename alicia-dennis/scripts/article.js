@@ -17,6 +17,7 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
+
   // COMMENTED: What is the benefit of cloning the article? (see the jQuery docs)
   // The .clone() method performs a deep copy of the set of matched elements, its benefit being that it copies the matched elements as well as all of their descendant elements and text nodes.
 
