@@ -20,18 +20,23 @@ function Article (rawDataObj) {
 Article.prototype.toHtml = function() {
 
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // It takes a deep copy of the structure of the article so you can reuse that structure.
 
   let $newArticle = $('article.template').clone();
   /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
 
+  $newArticle.removeClass('template');
+
   if (!this.publishedOn) $newArticle.addClass('draft');
+
   $newArticle.attr('data-category', this.category);
-  $newArticle.find('address a').html(this.author);
-  $newArticle.find('article a').attr('href', this.authorUrl);
-  $newArticle.find('article h1').html(this.title);
-  $newArticle.find( 'article body' ).html(this.body);
-  //$newArticle this.publishedOn;
+  $newArticle.find('.by-line a').html(this.author);
+  $newArticle.find('.by-line a').attr('href', this.authorUrl);
+  $newArticle.find('h1:first').html(this.title);
+  $newArticle.find( '.article-body' ).html(this.body);
+  $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn);
+  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
+
 
   /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
@@ -60,10 +65,10 @@ rawData.sort(function(a,b) {
 rawData.forEach(function(article){
   articles.push(new Article(article))
 });
+
 //for(let i = 0; i < articles.length; i++) {
 //  $('#articles').append(articles[i].toHtml());
 //}
-
 articles.forEach(function(article){
-  $('articles').append(article).toHtml();
+  $('#articles').append(article.toHtml());
 });
